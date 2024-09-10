@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>AC1-3TRI</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Chave de Descriptografia</ion-label>
+    <ion-input type="password" [(ngModel)]="decryptKey"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="decryptData()">Descriptografar</ion-button>
+
+  <div *ngIf="decryptedData">
+    <h3>Dados Descriptografados:</h3>
+    <p><strong>Nome:</strong> {{ decryptedData.name }}</p>
+    <p><strong>Email:</strong> {{ decryptedData.email }}</p>
+    <p><strong>Nota Privada:</strong> {{ decryptedData.note }}</p>
+  </div>
+</ion-content>

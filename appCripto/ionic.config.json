@@ -1,0 +1,7 @@
+{
+  "name": "appCripto",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
