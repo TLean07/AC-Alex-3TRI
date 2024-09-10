@@ -13,7 +13,6 @@ ion-label {
 }
 
 ion-input {
-  border: 1px solid var(--ion-color-secondary);
   border-radius: 8px;
   padding: 10px;
 }
@@ -22,7 +21,6 @@ ion-button {
   --background: var(--ion-color-secondary);
   --border-radius: 8px;
   font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
 
