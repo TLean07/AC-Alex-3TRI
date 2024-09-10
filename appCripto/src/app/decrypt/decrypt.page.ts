@@ -8,7 +8,7 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./decrypt.page.scss'],
 })
 export class DecryptPage {
-  decryptKey: string = '';
+  decryptKey: string='';
   decryptedData: any;
 
   constructor(private navCtrl: NavController, private dataService: DataService) {}
