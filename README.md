@@ -2,7 +2,7 @@
 
 ## Descrição
 
-O **AC-Alex-3TRI** é um projeto desenvolvido com o objetivo de aplicar os conhecimentos adquiridos durante o terceiro trimestre da disciplina de Linguagem de Programção.
+O **AC-Alex-3TRI** é um projeto desenvolvido com o objetivo de aplicar os conhecimentos adquiridos durante o terceiro trimestre da disciplina de Linguagem de Programção na FIAP SCHOOL.
 ## Tecnologias Utilizadas
 
 - **HTML5**: Utilizado para a estruturação semântica do conteúdo no projeto.
