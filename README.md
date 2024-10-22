@@ -53,7 +53,7 @@ O **AC-Alex-3TRI** é um projeto desenvolvido com o objetivo de aplicar os conhe
 4. **Execute o projeto**:
     Para iniciar o servidor de desenvolvimento, utilize:
     ```bash
-    npm start
+    ionic serve
     ```
 
 5. **Configuração do Banco de Dados**:
