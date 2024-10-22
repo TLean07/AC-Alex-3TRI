@@ -1,0 +1,46 @@
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Adicionar Novo Cuidador</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Nome</ion-label>
+        <ion-input [(ngModel)]="newCuidador.nome" placeholder="Nome do cuidador"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Telefone</ion-label>
+        <ion-input type="tel" [(ngModel)]="newCuidador.telefone" placeholder="Telefone do cuidador"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Experiência (anos)</ion-label>
+        <ion-input type="number" [(ngModel)]="newCuidador.experiencia" placeholder="Anos de experiência"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Especialidades</ion-label>
+        <ion-input [(ngModel)]="newCuidador.especialidades" placeholder="Especialidades"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" color="success" (click)="addCuidador()">Adicionar Cuidador</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item *ngFor="let cuidador of cuidadores" lines="inset">
+      <ion-label>
+        <h2>{{ cuidador.nome }}</h2>
+        <p>Telefone: {{ cuidador.telefone }}</p>
+        <p>Experiência: {{ cuidador.experiencia }} anos</p>
+        <p>Especialidades: {{ cuidador.especialidades }}</p>
+      </ion-label>
+
+      <ion-button fill="clear" color="danger" (click)="confirmDeleteCuidador(cuidador.id, cuidador.nome)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

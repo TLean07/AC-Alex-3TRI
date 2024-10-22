@@ -1,0 +1,50 @@
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Adicionar Novo Pet</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Nome</ion-label>
+        <ion-input [(ngModel)]="newPet.nome" placeholder="Nome do pet"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Espécie</ion-label>
+        <ion-input [(ngModel)]="newPet.especie" placeholder="Cachorro, gato, etc."></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Raça</ion-label>
+        <ion-input [(ngModel)]="newPet.raca" placeholder="Raça do pet"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Idade</ion-label>
+        <ion-input type="number" [(ngModel)]="newPet.idade" placeholder="Idade do pet"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Observações</ion-label>
+        <ion-textarea [(ngModel)]="newPet.observacoes" placeholder="Observações adicionais"></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="block" color="success" (click)="addPet()">Adicionar Pet</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item *ngFor="let pet of pets" lines="inset">
+      <ion-label>
+        <h2>{{ pet.nome }}</h2>
+        <p>{{ pet.especie }} - {{ pet.raca }} - Idade: {{ pet.idade }} anos</p>
+        <p>Observações: {{ pet.observacoes }}</p>
+      </ion-label>
+
+      <ion-button fill="clear" color="danger" (click)="confirmDeletePet(pet.id, pet.nome)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Gerenciamento de Pets e Cuidadores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-segment value="pets" (ionChange)="onSegmentChange($event)">
+    <ion-segment-button value="pets">
+      <ion-label>Pets</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="cuidadores">
+      <ion-label>Cuidadores</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  
+  <router-outlet></router-outlet>
+</ion-content>
